@@ -350,7 +350,7 @@ function AlertsPage() {
     fetchAlerts();
 
     // Establish WebSocket connection
-    const ws = new WebSocket("ws://sekmed-ems-backend.vercel.app/ws/alerts");
+    const ws = new WebSocket("wss://sekmed-ems-backend.vercel.app/ws/alerts");
     ws.onopen = () => {
       console.log("WebSocket connected");
     };
