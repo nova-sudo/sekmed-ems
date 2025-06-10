@@ -174,7 +174,7 @@ function AlertsPage() {
   const [selectedAlertId, setSelectedAlertId] = useState(null);
 
   // Google Maps API key from environment variable
-  const GOOGLE_MAPS_API_KEY = "AIzaSyAKJ4ydlFnla47b2l0Cy6PRcw5xVKiw26Q";
+  const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
   // Load Google Maps API script
   const { isLoaded, loadError } = useJsApiLoader({
