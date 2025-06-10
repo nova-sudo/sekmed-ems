@@ -43,7 +43,7 @@ function LoginPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/api/register', {
+      const response = await fetch('https://sekmed-ems-backend.vercel.app//api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ hospital_name: hospitalName, email }),
@@ -65,7 +65,7 @@ function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/api/login', {
+      const response = await fetch('https://sekmed-ems-backend.vercel.app//api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ hospital_id: hospitalId }),
@@ -336,7 +336,7 @@ function AlertsPage() {
     // Fetch initial alerts
     const fetchAlerts = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/alerts");
+        const response = await fetch("https://sekmed-ems-backend.vercel.app/api/alerts");
         const data = await response.json();
         if (response.ok) {
           setAlerts(data);
@@ -350,7 +350,7 @@ function AlertsPage() {
     fetchAlerts();
 
     // Establish WebSocket connection
-    const ws = new WebSocket("ws://localhost:8000/ws/alerts");
+    const ws = new WebSocket("ws://sekmed-ems-backend.vercel.app/ws/alerts");
     ws.onopen = () => {
       console.log("WebSocket connected");
     };
