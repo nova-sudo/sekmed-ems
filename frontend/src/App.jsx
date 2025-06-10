@@ -43,7 +43,7 @@ function LoginPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://sekmed-ems-backend.vercel.app//api/register', {
+      const response = await fetch('https://sekmed-ems-backend.vercel.app/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ hospital_name: hospitalName, email }),
@@ -65,7 +65,7 @@ function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://sekmed-ems-backend.vercel.app//api/login', {
+      const response = await fetch('https://sekmed-ems-backend.vercel.app/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ hospital_id: hospitalId }),
